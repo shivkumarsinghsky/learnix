@@ -70,11 +70,3 @@ class LinearRegression:
         with open(file_name, "rb") as file:
             model = pickle.load(file)
         return model
-
-experiences = [1, 2, 3, 4]
-actual_salaries = [35000, 40000, 45000, 50000]
-
-model = LinearRegression(learning_rate=0.000001, epochs=100)
-model.fit(experiences, actual_salaries)
-salary = model.predict([5])
-print("Predicted Salary:", salary)
